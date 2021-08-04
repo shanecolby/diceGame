@@ -49,5 +49,17 @@ rollBtn.addEventListener("click", function () {
 })
 
 resetBtn.addEventListener("click", function () {
-  console.log("click")
+  reset()
 })
+
+function reset() {
+  message.textContent = "Player 1 turn"
+  player1Score = 0
+  player2Score = 0
+  player1Dice.textContent = "-"
+  player2Dice.textContent = "-"
+  player1Scoreboard.textContent = 0
+  player2Scoreboard.textContent = 0
+  resetBtn.style.display = "none"
+  rollBtn.style.display = "block"
+}
