@@ -13,8 +13,6 @@ const resetBtn = document.getElementById("resetBtn")
 rollBtn.addEventListener("click", function () {
   const randomNumber = Math.floor(Math.random() * 6) + 1
 
-  console.log(randomNumber)
-
   if (player1Turn) {
     player1Score += randomNumber
     player1Scoreboard.textContent = player1Score
@@ -40,17 +38,14 @@ rollBtn.addEventListener("click", function () {
     rollBtn.style.display = "none"
     resetBtn.style.display = "block"
   }
-
-
-
-
   player1Turn = !player1Turn
-
 })
+
 
 resetBtn.addEventListener("click", function () {
   reset()
 })
+
 
 function reset() {
   message.textContent = "Player 1 turn"
