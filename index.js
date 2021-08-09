@@ -1,5 +1,7 @@
 let player1Score = 0
 let player2Score = 0
+let previousScore1 = 0
+let previousScore2 = 0
 let player1Turn = true
 
 const player1Dice = document.getElementById("player1Dice")
