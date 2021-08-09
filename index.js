@@ -26,11 +26,12 @@ rollBtn.addEventListener("click", function () {
     player1Dice.classList.remove("active")
     player2Dice.classList.add("active")
     message.textContent = "Player 2 Turn"
-    console.log(player1Score)
   } else {
     player2Score += randomNumber
+    previousScore2.push(randomNumber)
     player2Scoreboard.textContent = player2Score
     player2Dice.textContent = randomNumber
+    previousCard2.textContent = previousScore2
     player2Dice.classList.remove("active")
     player1Dice.classList.add("active")
     message.textContent = "Player 1 Turn"

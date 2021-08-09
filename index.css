@@ -51,6 +51,11 @@ body {
   justify-content: center;
 }
 
+#previousCard1, 
+#previousCard2 {
+  font-weight: 600;
+}
+
 
 button {
   color: #fff;
