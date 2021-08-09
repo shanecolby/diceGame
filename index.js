@@ -72,5 +72,4 @@ function reset() {
   rollBtn.style.display = "block"
   player2Dice.classList.remove("active")
   player1Dice.classList.add("active")
-  console.log(previousScore2)
 }
