@@ -1,7 +1,7 @@
 let player1Score = 0
 let player2Score = 0
-let previousScore1 = 0
-let previousScore2 = 0
+let previousScore1 = []
+let previousScore2 = []
 let player1Turn = true
 
 const player1Dice = document.getElementById("player1Dice")
@@ -11,17 +11,22 @@ const player2Scoreboard = document.getElementById("player2Scoreboard")
 const message = document.getElementById("message")
 const rollBtn = document.getElementById("rollBtn")
 const resetBtn = document.getElementById("resetBtn")
+const previousCard1 = document.getElementById("previousCard1")
+const previousCard2 = document.getElementById("previousCard2")
 
 rollBtn.addEventListener("click", function () {
   const randomNumber = Math.floor(Math.random() * 6) + 1
 
   if (player1Turn) {
     player1Score += randomNumber
+    previousScore1.push(randomNumber)
     player1Scoreboard.textContent = player1Score
     player1Dice.textContent = randomNumber
+    previousCard1.textContent = previousScore1
     player1Dice.classList.remove("active")
     player2Dice.classList.add("active")
     message.textContent = "Player 2 Turn"
+    console.log(player1Score)
   } else {
     player2Score += randomNumber
     player2Scoreboard.textContent = player2Score
