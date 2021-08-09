@@ -64,8 +64,13 @@ function reset() {
   player2Dice.textContent = "-"
   player1Scoreboard.textContent = 0
   player2Scoreboard.textContent = 0
+  previousCard1.textContent = ""
+  previousCard2.textContent = ""
+  previousScore1 = []
+  previousScore2 = []
   resetBtn.style.display = "none"
   rollBtn.style.display = "block"
   player2Dice.classList.remove("active")
   player1Dice.classList.add("active")
+  console.log(previousScore2)
 }
